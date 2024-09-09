@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
+    public float collectedScore = 0;
     //Accel is public so we can edit the movement speed within unity
 public float accel = 1f;
+    //seprate speed for both horizontal and veritcal
+public float horiAccel = 1f;
+public float vertAccel = .1f;
     // Start is called before the first frame update
     //void function, does not return any data
 void Start()
@@ -20,6 +24,9 @@ void FixedUpdate () //aka -> every physics update
     {
     //Move() function to find out what the current player inputs are
         Vector3 currentMove = Move();
+    //mulitply out horizontal and vertical move separtely
+        currentMove.x *= horiAccel;
+        currentMove.y *= vertAccel;
     //put it into a Translate, muliply by our accleration variable
         transform.Translate(currentMove*accel); 
     }
@@ -37,5 +44,18 @@ public Vector3 Move()
         Vector3 mymove = new Vector3(x,y,0);
     //then they return that value
         return mymove;
+    }
+    //checking for enemy or colliable collisons 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+    //when we collide with something and destory it and increase the player score
+        Debug.Log("Player collided with" + collision.gameObject.name);
+
+        if(collision.gameObject.tag == "collectiable")
+        {
+            Destroy(collision.gameObject);
+            collectedScore++;
+        }
+        
     }
 }
