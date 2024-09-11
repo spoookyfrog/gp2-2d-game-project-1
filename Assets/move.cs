@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class move : MonoBehaviour
 {
@@ -55,6 +56,12 @@ public Vector3 Move()
         {
             Destroy(collision.gameObject);
             collectedScore++;
+        }
+
+        if(collision.gameObject.tag == "bomb")
+        {
+            SceneManager.LoadScene(1);
+        
         }
         
     }

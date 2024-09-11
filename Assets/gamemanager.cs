@@ -41,7 +41,7 @@ public class gamemanager : MonoBehaviour
 
         //since the gamemanger has a connection to the player, we can reference the player compnents to find out score
         playerScore = playerScript.collectedScore;
-        myScore.text = myScore.ToString();
+        myScore.text = playerScore.ToString();
     }
 
     void FixedUpdate()
