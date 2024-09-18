@@ -22,6 +22,8 @@ public class gamemanager : MonoBehaviour
     {
         myPlayer = GameObject.FindGameObjectWithTag("Player");
         playerScript = myPlayer.GetComponent<move>();
+
+        //invokerepeating is a method that calls a function and runs it every x seconds with a y seconds
     }
 
     // Update is called once per frame
