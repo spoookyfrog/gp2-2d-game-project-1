@@ -16,7 +16,7 @@ public class move : MonoBehaviour
 
     public float JumpCooldown = 0f;
 
-    public float canJump = true;
+    bool canJump = true;
 
     public float coyoteTime = 2f;
     public float LongerTime = 2f;
@@ -116,7 +116,7 @@ public class move : MonoBehaviour
     public void Jump()
 
     {
-        myRB.AddForce(Vector3.up*jumpforce);
+        myRB.AddForce(Vector3.up*jumpForce);
     }
 
     public IEnumerator JumpCycle(float time)
