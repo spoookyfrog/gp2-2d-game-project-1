@@ -355,9 +355,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectedScore: 0
-  accel: 1
+  accel: 0
   horiAccel: 1
   vertAccel: 0.1
+  jumpForce: 30
+  JumpCooldown: 0
+  coyoteTime: 2
+  LongerTime: 2
 --- !u!50 &917690099426671049
 Rigidbody2D:
   serializedVersion: 4

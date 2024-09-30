@@ -31,6 +31,7 @@ public class move : MonoBehaviour
     void Start()
     {
         myRB = GetComponent<Rigidbody2D> ();
+        canJump = false;
     }
 
 
@@ -51,10 +52,9 @@ public class move : MonoBehaviour
         currentMove.x *= horiAccel;
         currentMove.y *= vertAccel;
         //put it into a Translate, muliply by our accleration variable
-       myRB.AddForce(currentMove);
+        myRB.AddForce(currentMove);
 
-       if(Input.GetAxis("Jump") > .05f && canJump)
-
+        if(Input.GetAxis("Jump") > .05f && canJump)
         {
             StartCoroutine(JumpCycle(JumpCooldown));
         }

@@ -928,15 +928,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1527431236114226749, guid: 2e895b0b7a52f458db7964b992a2c313, type: 3}
       propertyPath: accel
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1527431236114226749, guid: 2e895b0b7a52f458db7964b992a2c313, type: 3}
       propertyPath: horiAccel
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1527431236114226749, guid: 2e895b0b7a52f458db7964b992a2c313, type: 3}
+      propertyPath: jumpForce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527431236114226749, guid: 2e895b0b7a52f458db7964b992a2c313, type: 3}
       propertyPath: vertAccel
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2742717697113324902, guid: 2e895b0b7a52f458db7964b992a2c313, type: 3}
       propertyPath: m_SortingOrder
@@ -1118,7 +1122,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169157020}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
