@@ -51,7 +51,7 @@ public class move : MonoBehaviour
         currentMove.x *= horiAccel;
         currentMove.y *= vertAccel;
         //put it into a Translate, muliply by our accleration variable
-       myRB.Addforce(currentMove);
+       myRB.AddForce(currentMove);
 
        if(Input.GetAxis("Jump") > .05f && canJump)
 
