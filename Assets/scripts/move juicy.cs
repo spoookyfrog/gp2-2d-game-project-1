@@ -46,11 +46,5 @@ public AudioClip[] hitsound;
       //code that runs after TIME seconds have passed
     }
 
-    public Vector3 Direction()
-    {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        Vector3 dir = new Vector3(x,y,0);
-        return dir;
-    }
+    
 }

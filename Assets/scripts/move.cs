@@ -51,8 +51,10 @@ public class move : MonoBehaviour
         //mulitply out horizontal and vertical move separtely
         currentMove.x *= horiAccel;
         currentMove.y *= vertAccel;
+
+        Debug.Log ("b");
         //put it into a Translate, muliply by our accleration variable
-        myRB.AddForce(currentMove);
+        myRB.velocity = (currentMove);
 
         if(Input.GetAxis("Jump") > .05f && canJump)
         {
@@ -73,6 +75,8 @@ public class move : MonoBehaviour
 
     //contruct our vector out of teh vertical/horizontal axis
         Vector3 mymove = new Vector3(x,y,0);
+
+        Debug.Log("A");
     //then they return that value
         return mymove;
     }
