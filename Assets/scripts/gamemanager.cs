@@ -11,17 +11,20 @@ public class gamemanager : MonoBehaviour
     public GameObject myPlayer;
     public TextMeshProUGUI myScore;
     public GameObject myEnemy;
-
     public float myFixedTimer = 0f;
     public float spawnInterval = .5f;
     public float spawnTimer = 0f;
     public float playerScore = 0;
+    public Transform[] spawnPoints;
+    public float minSpawnInterval = 1f;
+    public float maxSpawnInterval = 5f;
     move playerScript; 
     // Start is called before the first frame update
     void Start()
     {
         myPlayer = GameObject.FindGameObjectWithTag("Player");
         playerScript = myPlayer.GetComponent<move>();
+        spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
 
         //invokerepeating is a method that calls a function and runs it every x seconds with a y seconds
     }
@@ -33,11 +36,15 @@ public class gamemanager : MonoBehaviour
         myTimer += Time.deltaTime;
 //track enemy spawn time here
         spawnTimer += Time.deltaTime;
+        
         //once the interval hits, trigger an enemy spawn and reset timer
         if(spawnTimer >= spawnInterval)
         {
             spawnTimer = 0f;
             Instantiate(myEnemy);
+            spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+        int randomIndex = Random.Range(0, spawnPoints.Length);
+        Instantiate(myEnemy, spawnPoints[randomIndex].position, Quaternion.identity);
             Debug.Log("enemy spawn");
         }
 
