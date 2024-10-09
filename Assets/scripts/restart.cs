@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class startbutton : MonoBehaviour
+public class restart : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
     }
 }
+

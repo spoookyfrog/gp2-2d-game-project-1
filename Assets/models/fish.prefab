@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2501443625278196919}
   - component: {fileID: -5828781013031599245}
   m_Layer: 0
-  m_Name: Square
+  m_Name: fish
   m_TagString: collectiable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

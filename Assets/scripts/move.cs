@@ -52,7 +52,7 @@ public class move : MonoBehaviour
         currentMove.x *= horiAccel;
         currentMove.y *= vertAccel;
 
-        Debug.Log ("b");
+        
         //put it into a Translate, muliply by our accleration variable
         myRB.velocity = (currentMove);
 
@@ -76,7 +76,7 @@ public class move : MonoBehaviour
     //contruct our vector out of teh vertical/horizontal axis
         Vector3 mymove = new Vector3(x,y,0);
 
-        Debug.Log("A");
+        
     //then they return that value
         return mymove;
     }
@@ -98,7 +98,7 @@ public class move : MonoBehaviour
 
         if(collision.gameObject.tag == "bomb")
         {
-            SceneManager.LoadScene(1);        
+            SceneManager.LoadScene(3);        
         }
     }
         
